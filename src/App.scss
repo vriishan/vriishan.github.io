@@ -1,0 +1,59 @@
+html, body {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.836);
+    color: rgb(225, 237, 241);
+}
+
+section {
+    height: 100vh;
+    // width: 100vw;
+    scroll-snap-align: center;
+    overflow: hidden;
+}
+
+.course {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 738px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: 1366px) {
+        @content;
+    }
+}
