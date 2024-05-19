@@ -1,9 +1,30 @@
 @import "./../../App.scss";
 
 .navbar {
-    height: 100px;
+    height: 75px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     .wrapper {
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            font-size: 20px;
+
+            @include mobile {
+                display: none;
+            }
+        }
         max-width: 1366px;
         margin: auto;
         display: flex;
