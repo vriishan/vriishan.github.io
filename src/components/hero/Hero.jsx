@@ -28,15 +28,16 @@ const Hero = () => {
 
     const sliderVariants = {
         initial: {
-            x: 0
+            x: 0,
+            opacity: 0
         },
         animate: {
-            x: "-1000%",
+            x: "-1000",
             opacity: 1,
             transition: {
                 repeat: Infinity,
                 repeatType:"mirror",
-                duration: 20
+                duration: 10
             }
         }
     };
@@ -58,12 +59,12 @@ const Hero = () => {
                 </motion.div>
                 <motion.img src="./scroll.png" alt="" variants={textVariants} animate="scrollButton" />
             </motion.div>
-            <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
+            {/* <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
                 Backend Frontend DevOps Automation Documentation
-            </motion.div>
-            <div className="imageContainer">
+            </motion.div> */}
+            {/* <div className="imageContainer">
                 <img src="./hero.png" alt="" />
-            </div>
+            </div> */}
         </div>
     </div>
     )

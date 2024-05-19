@@ -1,8 +1,11 @@
 @import "./../../App.scss";
 
 .hero {
-    height: calc(100vh - 100px);
-    background: linear-gradient(180deg, #2a2a2a, #222831);
+    height: 100vh;
+    background-image: url('./pixelart1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
     overflow: hidden;
     position: relative;
 

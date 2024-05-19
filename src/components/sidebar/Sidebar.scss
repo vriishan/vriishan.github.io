@@ -1,6 +1,11 @@
-@import "../../app.scss";
+@import "./../../App.scss";
 
 .sidebar {
+    
+    @include desktop {
+        display: none;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: center;

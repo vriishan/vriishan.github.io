@@ -6,12 +6,15 @@ import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Skills from "./components/skills/Skills";
 import Cursor from "./components/cursor/Cursor";
+import Sidebar from "./components/sidebar/Sidebar"
+
 const App = () => {
   return (
     <div>
       {/* <Cursor /> */}
+      <Navbar></Navbar>
+      <Sidebar></Sidebar>
       <section>
-        <Navbar></Navbar>
         <Hero></Hero>        
       </section>
       <section id="Home">Home</section>
