@@ -13,24 +13,57 @@
     justify-content: space-between;
     align-items: center;
 
+    @include mobile {
+        display: none
+    }
+    @include tablet {
+        display: none
+    }
+
     .wrapper {
+        // max-width: 1366px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+
+        .navbarLeft {
+            flex: 1;
+            margin-left: 0.5rem;
+
+            span {
+                @include tablet {
+                    display: none;
+                }
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+
+        .navbarMiddle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 2;
+        }
+
+        .navbarRight {
+            flex: 1;
+        }
 
         .links {
             display: flex;
             flex-direction: row;
-            gap: 20px;
+            gap: 40px;
             font-size: 20px;
 
             @include mobile {
                 display: none;
             }
         }
-        max-width: 1366px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
 
         @include mobile {
             justify-content: flex-end;
