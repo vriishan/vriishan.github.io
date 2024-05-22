@@ -1,9 +1,15 @@
 import "./Navbar.scss"
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 // import Sidebar from "../sidebar/Sidebar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ portfolioRef }) => {
+
+    const scrollToPortfolio = () => {
+        if (portfolioRef.current) {
+          portfolioRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
 
     const hoverVariant = {
         "hover": {
@@ -31,7 +37,7 @@ const Navbar = () => {
             className="navbar"
             variants = {{
                 visible: { 
-                    backgroundColor: "#b1b7b4"
+                    backgroundColor: "#FF573335"
                 },
                 hidden: {
                     backgroundColor: "#00000000"
@@ -54,10 +60,10 @@ const Navbar = () => {
                 <div className="navbarMiddle">
                     <div className="links">
                         <motion.a href="#" variants={hoverVariant} whileHover="hover">Home</motion.a>
-                        <motion.a href="#" variants={hoverVariant} whileHover="hover">About</motion.a>
-                        <motion.a href="#" variants={hoverVariant} whileHover="hover">Skills</motion.a>
-                        <motion.a href="#" variants={hoverVariant} whileHover="hover">Experience</motion.a>
-                        <motion.a href="#" variants={hoverVariant} whileHover="hover">Projects</motion.a>
+                        <motion.a href="#About" variants={hoverVariant} whileHover="hover">About</motion.a>
+                        <motion.a href="#Skills" variants={hoverVariant} whileHover="hover">Skills</motion.a>
+                        <motion.a href="#Experience" variants={hoverVariant} whileHover="hover">Experience</motion.a>
+                        <motion.a variants={hoverVariant} whileHover="hover" onClick={scrollToPortfolio}>Projects</motion.a>
                     </div>
                 </div>
                 <div className="navbarRight">

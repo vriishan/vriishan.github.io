@@ -7,25 +7,26 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Skills from "./components/skills/Skills";
 import Cursor from "./components/cursor/Cursor";
 import Sidebar from "./components/sidebar/Sidebar"
+import { useRef } from "react";
 
 const App = () => {
+  const portfolioRef = useRef();
   return (
     <div>
       {/* <Cursor /> */}
-      <Navbar></Navbar>
-      <Sidebar></Sidebar>
+      <Navbar portfolioRef={portfolioRef}/>
+      <Sidebar />
       <section>
         <Hero></Hero>        
       </section>
-      <section id="Home">Home</section>
-      <section id="About"><Parallax type="portfolio"/></section>
-      <section id="Skills"><Skills /></section>
+      <section id="About">About me</section>
+      <section><Parallax type="portfolio"/></section>
+      <section id="Skills"><Skills/></section>
       <section id="Experience">Experience</section>
-      <section id="Projects"></section>
-      { /* section */ }
+      <div ref={portfolioRef}>
         <Portfolio />
-      { /* section */ }
-      <section id="Contact"><Contact /></section>
+      </div>
+      <section id="Contact"><Contact/></section>
     </div>
   );
 };
