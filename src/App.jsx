@@ -21,7 +21,8 @@ const App = () => {
       </section>
       <section id="About">About me</section>
       <section><Parallax type="portfolio"/></section>
-      <section id="Skills"><Skills/></section>
+      {/* <section id="Skills"><Skills/></section> */}
+      <Skills/>
       <section id="Experience">Experience</section>
       <div ref={portfolioRef}>
         <Portfolio />
