@@ -1,0 +1,10 @@
+.blinker {
+    display: inline-block;
+    height: 1.25rem;
+    /* 20px */
+    width: 1px;
+    transform: translateY(0.25rem);
+    /* 4px */
+    background-color: #ffffff;
+    /* slate-900 */
+}
