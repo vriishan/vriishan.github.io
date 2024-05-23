@@ -31,6 +31,8 @@
         .navbarLeft {
             flex: 1;
             margin-left: 0.5rem;
+            display: flex;
+            flex-direction: row;
 
             span {
                 @include tablet {

@@ -1,42 +1,65 @@
 import "./Navbar.scss"
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-// import Sidebar from "../sidebar/Sidebar";
-import { useState } from "react";
+import { motion, useScroll, useMotionValueEvent, useMotionValue, useTransform, animate } from "framer-motion";
+import { useState, useEffect } from "react";
+import CursorBlinker from "./CursorBlinker/CursorBlinker";
 
 const Navbar = ({ portfolioRef }) => {
 
+    const name = "Vrushab"
+    const count = useMotionValue(0);
+
+    const rounded = useTransform(count, (latest) => Math.round(latest));
+    const displayName = useTransform(rounded, (latest) =>
+        name.slice(0, latest)
+    );
+
+    const [displayNameValue, setDisplayNameValue] = useState('');
+
+    useEffect(() => {
+        const controls = animate(count, name.length, {
+            type: "tween", // Not really needed because adding a duration will force "tween"
+            delay: 2,
+            duration: 2,
+            ease: "easeInOut",
+        });
+        return controls.stop;
+    }, []);
+
+    useEffect(() => {
+        displayName.onChange((latest) => setDisplayNameValue(latest));
+    }, [displayName]);
+
     const scrollToPortfolio = () => {
         if (portfolioRef.current) {
-          portfolioRef.current.scrollIntoView({ behavior: 'smooth' });
+            portfolioRef.current.scrollIntoView({ behavior: 'smooth' });
         }
-      };
+    };
 
     const hoverVariant = {
         "hover": {
             scale: 1.2,
             transition: { duration: 0.2 },
         }
-      }
+    }
 
-    // const ref = useRef();
     const [hidden, setHidden] = useState(true);
 
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-      const previous = scrollY.getPrevious();
-      if (latest > previous && latest > 150) {
-        setHidden(false);
-      } else {
-        setHidden(true);
-      }
+        const previous = scrollY.getPrevious();
+        if (latest > previous && latest > 150) {
+            setHidden(false);
+        } else {
+            setHidden(true);
+        }
     })
 
     return (
-        <motion.div 
+        <motion.div
             className="navbar"
-            variants = {{
-                visible: { 
+            variants={{
+                visible: {
                     backgroundColor: "#FF573335"
                 },
                 hidden: {
@@ -44,18 +67,16 @@ const Navbar = ({ portfolioRef }) => {
                 }
             }}
             animate={hidden ? "hidden" : "visible"}
-            transition={{ duration: 0.5, ease: "easeInOut"}}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
         >
             <div className="wrapper">
                 <div className="navbarLeft">
                     <motion.span
                         className="motion-span"
-                        initial={{opacity: 0, scale: 0.5}} 
-                        animate={{opacity: 1, scale: 1}}
-                        transition={{duration: 1}}
                     >
-                        &lt;Vrushab/&gt;
+                        &lt;{displayNameValue}/&gt;
                     </motion.span>
+
                 </div>
                 <div className="navbarMiddle">
                     <div className="links">
@@ -66,17 +87,7 @@ const Navbar = ({ portfolioRef }) => {
                         <motion.a variants={hoverVariant} whileHover="hover" onClick={scrollToPortfolio}>Projects</motion.a>
                     </div>
                 </div>
-                <div className="navbarRight">
-
-                </div>
-                
-                
-                {/* <div className="social">
-                    <a href="#"><img src="./linkedin.png" alt="" /></a>
-                    <a href="#"><img src="./instagram.png" alt="" /></a>
-                    <a href="#"><img src="./youtube.png" alt="" /></a>
-                    <a href="#"><img src="./email.png" alt="" /></a>
-                </div> */}
+                <div className="navbarRight"></div>
             </div>
         </motion.div>
     )

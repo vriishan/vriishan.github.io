@@ -8,6 +8,7 @@ import Skills from "./components/skills/Skills";
 import Cursor from "./components/cursor/Cursor";
 import Sidebar from "./components/sidebar/Sidebar"
 import { useRef } from "react";
+import About from "./components/about/About";
 
 const App = () => {
   const portfolioRef = useRef();
@@ -19,9 +20,8 @@ const App = () => {
       <section>
         <Hero></Hero>        
       </section>
-      <section id="About">About me</section>
-      <section><Parallax type="portfolio"/></section>
-      {/* <section id="Skills"><Skills/></section> */}
+      <About />
+      {/* <section><Parallax type="portfolio"/></section> */}
       <Skills/>
       <section id="Experience">Experience</section>
       <div ref={portfolioRef}>
