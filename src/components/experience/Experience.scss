@@ -1,0 +1,19 @@
+.experience {
+    color: black;
+    .vertical-timeline-element-icon {
+        overflow: hidden;
+        width: 70px !important;
+        height: 70px !important;
+        margin-left: -36px !important;
+        svg {
+            width: 63px !important;
+            height: 63px !important;
+            margin-left: -32px !important;
+            margin-top: -28px !important;
+        }
+    }
+
+    .date {
+        color: white;
+    }
+}
