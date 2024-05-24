@@ -74,7 +74,7 @@ const Navbar = ({ portfolioRef }) => {
                     <motion.span
                         className="motion-span"
                     >
-                        &lt;{displayNameValue}/&gt;
+                        &lt;{displayNameValue}<CursorBlinker />/&gt;
                     </motion.span>
 
                 </div>

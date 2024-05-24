@@ -9,6 +9,7 @@ import Cursor from "./components/cursor/Cursor";
 import Sidebar from "./components/sidebar/Sidebar"
 import { useRef } from "react";
 import About from "./components/about/About";
+import Experience from "./components/experience/Experience";
 
 const App = () => {
   const portfolioRef = useRef();
@@ -21,9 +22,8 @@ const App = () => {
         <Hero></Hero>        
       </section>
       <About />
-      {/* <section><Parallax type="portfolio"/></section> */}
       <Skills/>
-      <section id="Experience">Experience</section>
+      <Experience />
       <div ref={portfolioRef}>
         <Portfolio />
       </div>
