@@ -1,0 +1,146 @@
+.modal-backdrop {
+  background-color: rgba(15, 23, 42, 0.2);
+  /* bg-slate-900/20 */
+  backdrop-filter: blur(10px);
+  /* backdrop-blur */
+  padding: 4.8rem 2rem;
+  /* p-8 */
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  cursor: pointer;
+  height: 100vh;
+
+  .closeModal {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: var(--text-md);
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    cursor: pointer;
+  }
+
+}
+
+.modal-content {
+  background: linear-gradient(to bottom right, #000000, #3a3a3b);
+  /* from-violet-600 to-indigo-600 */
+  color: white;
+  padding: 1.5rem;
+  /* p-6 */
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+  /* shadow-xl */
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  height: fit-content;
+
+  img {
+    width: 100%;
+  }
+
+
+  .modal-icon-background {
+    color: rgba(255, 255, 255, 0.1);
+    /* text-white/10 */
+    transform: rotate(12deg);
+    /* rotate-12 */
+    font-size: 250px;
+    /* text-[250px] */
+    position: absolute;
+    top: -6rem;
+    /* -top-24 */
+    left: -6rem;
+    /* -left-24 */
+    z-index: 0;
+  }
+
+  .modal-icon {
+    background-color: white;
+    width: 4rem;
+    /* w-16 */
+    height: 4rem;
+    /* h-16 */
+    margin-bottom: 0.5rem;
+    /* mb-2 */
+    border-radius: 50%;
+    /* rounded-full */
+    font-size: 1.875rem;
+    /* text-3xl */
+    color: #4f46e5;
+    /* text-indigo-600 */
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal-header {
+    font-size: 1.875rem;
+    /* text-3xl */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    /* mb-2 */
+  }
+
+  .modal-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    /* mb-6 */
+  }
+
+  p {
+    padding: 0.75rem 0;
+  }
+
+  .modal-footer {
+    display: flex;
+    gap: 0.5rem;
+    /* gap-2 */
+  }
+
+  .button {
+    width: 100%;
+    padding: 0.5rem 0;
+    /* py-2 */
+    border-radius: 0.5rem;
+    /* rounded */
+    font-weight: 600;
+    /* font-semibold */
+    transition: background-color 0.2s, opacity 0.2s;
+    /* transition-colors, transition-opacity */
+  }
+
+  .button-secondary {
+    background: transparent;
+    color: white;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      /* hover:bg-white/10 */
+    }
+  }
+
+  .button-primary {
+    background: white;
+    color: #4f46e5;
+
+    /* text-indigo-600 */
+    &:hover {
+      opacity: 0.9;
+      /* hover:opacity-90 */
+    }
+  }
+
+}
