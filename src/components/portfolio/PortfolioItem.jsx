@@ -1,10 +1,9 @@
 import SpringModal from "./modal/SpringModal";
 import { useState, useEffect } from "react";
-import HoverModal from "./hover-modal/HoverModal";
 
 const PortfolioItem = ({ title, description, imageUrl, type }) => {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
