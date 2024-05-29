@@ -18,7 +18,7 @@ const App = () => {
       {/* <Cursor /> */}
       <Navbar portfolioRef={portfolioRef}/>
       <Sidebar />
-      <section>
+      <section style={{backgroundColor: '#fbfbfb', color: 'black'}}>
         <Hero></Hero>        
       </section>
       <About />

@@ -2,6 +2,7 @@ import "./Navbar.scss"
 import { motion, useScroll, useMotionValueEvent, useMotionValue, useTransform, animate } from "framer-motion";
 import { useState, useEffect } from "react";
 import CursorBlinker from "./CursorBlinker/CursorBlinker";
+import downloadLogo from '/download.svg'
 
 const Navbar = ({ portfolioRef }) => {
 
@@ -71,23 +72,31 @@ const Navbar = ({ portfolioRef }) => {
         >
             <div className="wrapper">
                 <div className="navbarLeft">
+                    <span>
+                        &lt;
+                    </span>
                     <motion.span
                         className="motion-span"
+                        style={{"color": "rgb(44, 133, 184)"}}
                     >
-                        &lt;{displayNameValue}<CursorBlinker />/&gt;
+                        {displayNameValue}<CursorBlinker />/
                     </motion.span>
-
+                    <span>
+                        &gt;
+                    </span>
                 </div>
                 <div className="navbarMiddle">
                     <div className="links">
-                        <motion.a href="#" variants={hoverVariant} whileHover="hover">Home</motion.a>
-                        <motion.a href="#About" variants={hoverVariant} whileHover="hover">About</motion.a>
-                        <motion.a href="#Skills" variants={hoverVariant} whileHover="hover">Skills</motion.a>
-                        <motion.a href="#Experience" variants={hoverVariant} whileHover="hover">Experience</motion.a>
-                        <motion.a variants={hoverVariant} whileHover="hover" onClick={scrollToPortfolio}>Projects</motion.a>
+                        <motion.a href="#" variants={hoverVariant} whileHover="hover">home</motion.a>
+                        <motion.a href="#About" variants={hoverVariant} whileHover="hover">about</motion.a>
+                        <motion.a href="#Skills" variants={hoverVariant} whileHover="hover">skills</motion.a>
+                        <motion.a href="#Experience" variants={hoverVariant} whileHover="hover">experience</motion.a>
+                        <motion.a variants={hoverVariant} whileHover="hover" onClick={scrollToPortfolio}>projects</motion.a>
                     </div>
                 </div>
-                <div className="navbarRight"></div>
+                <div className="navbarRight">
+                    <button className="resumeButton">My Resume<img src={downloadLogo}/></button>
+                </div>
             </div>
         </motion.div>
     )
