@@ -37,6 +37,46 @@ section {
     }
 }
 
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    
+    .sectionHeader {
+        font-family: "Figtree";
+        font-size: 3rem;
+
+        .numberedHeading {
+            color: #f5cb5c;
+            font-family: "Inconsolata";
+            font-size: 3rem;
+        }
+
+        .numberedHeading.small {
+            font-size: 1.75rem;
+        }
+    }
+
+    .sectionHeader.white {
+        color: #e8eddf;
+    }
+
+    .sectionHeader.small {
+        font-size: 2rem;
+    }
+}
+
+.header.contact {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0rem;
+    width: 100%;
+}
+
+
 @mixin mobile {
     @media (max-width: 738px) {
         @content;

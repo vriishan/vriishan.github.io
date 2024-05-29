@@ -7,7 +7,9 @@ import PortfolioItem from "./PortfolioItem";
 const Portfolio = () => {
   return (
     <div className="portfolio">
-      <h1>My Work</h1>
+      <div className="header">
+          <h1 className="sectionHeader white"><font className="numberedHeading">04.</font>Projects</h1>
+      </div>
       <div className="grid-container">
         {projects.map((item, index) => {
           return (

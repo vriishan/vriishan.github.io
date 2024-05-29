@@ -13,7 +13,9 @@ import "react-vertical-timeline-component/style.min.css";
 const Experience = () => {
     return (
         <div className="experience">
-            <h1>Experience</h1>
+            <div className="header">
+                <h1 className="sectionHeader white"><font className="numberedHeading">03.</font>Experience</h1>
+            </div>
             <VerticalTimeline>
                 {timelineElements.map((element) => {
                     let showButton =

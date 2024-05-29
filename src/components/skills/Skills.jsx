@@ -69,24 +69,9 @@ const Skills = () => {
 
   return (
     <motion.div className="skills" ref={ref} animate="animate">
-      {/* <motion.div className="textContainer" variants={variants}>
-        <p>I focus on building scalable, efficient and elegant applications, through and through</p>
-        <hr />
-      </motion.div> */}
-      {/* <motion.div className="titleContainer" variants={variants}>
-        <div className="title">
-          <img src="./people.webp" alt="" />
-          <h1>
-            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
-          </h1>
-        </div>
-        <div className="title">
-          <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b> Business.
-          </h1>
-          <button>What I can do?</button>
-        </div>
-      </motion.div> */}
+      <div className="header">
+        <h1 className="sectionHeader"><font className="numberedHeading">02.</font>My Skillset</h1>
+      </div>
       <motion.div className="listContainer">
         <motion.div className="cardsContainer" style={{x}}>
           {skills.map(skill => {
