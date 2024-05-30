@@ -43,16 +43,16 @@ const Navbar = ({ portfolioRef }) => {
         }
     }
 
-    const [hidden, setHidden] = useState(true);
+    const [hidden, setHidden] = useState(false);
 
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious();
         if (latest > previous && latest > 150) {
-            setHidden(false);
-        } else {
             setHidden(true);
+        } else {
+            setHidden(false);
         }
     })
 
@@ -61,10 +61,14 @@ const Navbar = ({ portfolioRef }) => {
             className="navbar"
             variants={{
                 visible: {
-                    backgroundColor: "#FF573335"
+                    opacity: 1,
+                    y: 0,
+                    backgroundColor: "#3c6e71"
                 },
                 hidden: {
-                    backgroundColor: "#00000000"
+                    opacity: 0,
+                    y: -100,
+                    backgroundColor: "#000000"
                 }
             }}
             animate={hidden ? "hidden" : "visible"}
@@ -77,9 +81,8 @@ const Navbar = ({ portfolioRef }) => {
                     </span>
                     <motion.span
                         className="motion-span"
-                        style={{"color": "rgb(44, 133, 184)"}}
                     >
-                        {displayNameValue}<CursorBlinker />/
+                        {displayNameValue}<CursorBlinker /><font>/</font>
                     </motion.span>
                     <span>
                         &gt;

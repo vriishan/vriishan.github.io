@@ -21,6 +21,9 @@ const Contact = () => {
     return (
         <motion.div className="contact" variants={variants} initial="hidden" whileInView="visible">
             <motion.div className="textContainer" variants={variants}>
+                <div className="header contact">
+                    <h1 className="sectionHeader white small"><font className="numberedHeading small">05.</font>What's next?</h1>
+                </div>
                 <motion.h1 variants={variants}>Let's connect!</motion.h1>
                 <div className="item">
                     <h2>Mail</h2>
