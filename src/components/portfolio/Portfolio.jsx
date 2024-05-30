@@ -19,6 +19,7 @@ const Portfolio = () => {
                 description={item.desc}
                 imageUrl={item.img}
                 type={item.type}
+                techStack={item.techStack}
               />
           );
         }

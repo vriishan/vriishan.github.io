@@ -99,7 +99,7 @@ const Hero = () => {
                     animate="animate"
                 >
                     <motion.h2 variants={textVariants}>VRUSHAB SHANDILYA</motion.h2>
-                    <motion.h1 variants={textVariants}>I'm a <b className="bold">FullStack Engineer</b> who loves to <b className="bold">automate</b>!</motion.h1>
+                    <motion.h1 variants={textVariants}>I'm a <b className="bold">FullStack Engineer</b> who loves to <b className="bold yellow">automate</b>!</motion.h1>
                     <motion.div className="buttons" variants={textVariants}>
                         <motion.button variants={textVariants} className="projectButton">Explore Projects</motion.button>
                         <motion.button variants={textVariants} className="contactButton">Contact Me</motion.button>

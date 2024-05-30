@@ -8,7 +8,7 @@ const skills = [
   {
     id: 1,
     title: "Frontend",
-    image: ["/react.png"],
+    image: ["/react.png", "/react.png", "/react.png"],
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, deleniti! Maiores quis incidunt eveniet reiciendis sequi sapiente voluptates facere in! Modi nihil asperiores mollitia fugit sed corporis veniam hic ullam."
   },
   {
@@ -34,12 +34,6 @@ const skills = [
     title: "DevOps3",
     image: ["/react.png"],
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veniam accusamus sint inventore at doloremque quae blanditiis totam excepturi dolorem atque maiores distinctio expedita itaque odit eaque consequuntur, nulla dicta."
-  },
-  {
-    id: 6,
-    title: "DevOps4",
-    image: ["/react.png"],
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veniam accusamus sint inventore at doloremque quae blanditiis totam excepturi dolorem atque maiores distinctio expedita itaque odit eaque consequuntur, nulla dicta."
   }
 ];
 
@@ -50,7 +44,7 @@ const Skills = () => {
   const { scrollYProgress } = useScroll({
     target: ref,
   })
-  // const x = "";
+
   const x = useTransform(scrollYProgress, [0, 1], ["30%", "-75%"]);
 
   const isInView = useInView(ref, {
@@ -69,10 +63,10 @@ const Skills = () => {
 
   return (
     <motion.div className="skills" ref={ref} animate="animate">
-      <div className="header">
+      <motion.div className="listContainer">
+      <div className="header sticky">
         <h1 className="sectionHeader"><font className="numberedHeading">02.</font>My Skillset</h1>
       </div>
-      <motion.div className="listContainer">
         <motion.div className="cardsContainer" style={{x}}>
           {skills.map(skill => {
             return <Card key={skill.id} {...skill} />
