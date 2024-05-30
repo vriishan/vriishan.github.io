@@ -2,6 +2,7 @@ import React from 'react'
 import './Hero.scss'
 import { motion } from 'framer-motion'
 import scrollDown from '/scrolldown.svg'
+import Automator from './Automator/Automator'
 
 const Hero = () => {
 
@@ -107,7 +108,7 @@ const Hero = () => {
                     <motion.img src={scrollDown} alt="" variants={scrollVariants} animate="animate" transition="transition" />
                 </motion.div>
                 <div className="animationContainer">
-                    <img src="./automation.gif" alt="" />
+                    <Automator />
                     {/* <motion.span variants={binaryCodeVariant} animate="visible">11011100001110000011110000</motion.span>
                     <div className="box">
                         box
