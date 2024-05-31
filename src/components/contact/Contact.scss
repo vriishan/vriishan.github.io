@@ -58,10 +58,12 @@
         }
 
         .phoneSvg {
-            stroke: white;
-            position: absolute;
-            margin: auto;
-            color: black;
+                width: 10px;
+                overflow: visible;
+                stroke: #fff;
+                stroke-width: 1;
+                stroke-linejoin: round;
+                stroke-linecap: round;
         }
 
         form {
@@ -85,15 +87,17 @@
             button {
                 padding: 20px;
                 border: none;
-                background-color: orange;
+                background-color: var(--secondary);
                 cursor: pointer;
                 font-weight: 500;
+                font-family: "Inconsolata";
 
                 @include mobile {
                     padding: 10px;
 
                 }
             }
+
         }
         
     }

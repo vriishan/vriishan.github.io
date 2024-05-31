@@ -2,6 +2,25 @@ html, body {
     scroll-behavior: smooth;
 }
 
+
+$text: #ffffff;
+$background: #121212;
+$card: #1d1b1b;
+$primary: #005148;
+$secondary: #2e816f;
+$accent: #2bffdc;
+$tertiary: #B94CCF;
+
+:root {
+    --accent: #{$accent};
+    --background: #{$background};
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --accent: #{$accent};
+    --tertiary: #{$tertiary};
+    --card: #{$card};
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -14,7 +33,7 @@ a {
 }
 
 body {
-    background-color: #353535;
+    background-color: #111111;
     color: rgb(225, 237, 241);
 }
 
@@ -49,7 +68,7 @@ section {
         font-size: 3rem;
 
         .numberedHeading {
-            color: #f5cb5c;
+            color: $accent;
             font-family: "Inconsolata";
             font-size: 3rem;
         }
@@ -60,7 +79,7 @@ section {
     }
 
     .sectionHeader.white {
-        color: #e8eddf;
+        color: $text;
     }
 
     .sectionHeader.small {
