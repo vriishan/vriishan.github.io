@@ -39,6 +39,12 @@ const Navbar = ({ portfolioRef }) => {
     const hoverVariant = {
         "hover": {
             scale: 1.2,
+            color: "var(--accent)",
+            transition: { duration: 0.2 },
+        },
+        "hoverButton": {
+            scale: 1.1,
+            color: "var(--accent)",
             transition: { duration: 0.2 },
         }
     }
@@ -63,7 +69,9 @@ const Navbar = ({ portfolioRef }) => {
                 visible: {
                     opacity: 1,
                     y: 0,
-                    backgroundColor: "#3c6e71"
+                    backgroundColor: "rgba(17, 17, 17, 0.5)",
+                    backdropFilter: "blur(5px)", // Apply blur effect
+                    WebkitBackdropFilter: "blur(5px)"
                 },
                 hidden: {
                     opacity: 0,
@@ -98,7 +106,7 @@ const Navbar = ({ portfolioRef }) => {
                     </div>
                 </div>
                 <div className="navbarRight">
-                    <button className="resumeButton">My Resume<img src={downloadLogo}/></button>
+                    <motion.button className="resumeButton" variants={hoverVariant} whileHover="hoverButton">My Resume<img src={downloadLogo}/></motion.button>
                 </div>
             </div>
         </motion.div>

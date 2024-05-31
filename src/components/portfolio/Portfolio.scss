@@ -17,7 +17,7 @@
 }
 
 .portfolio-item {
-  background-color: #284b63; /* bg-gray-800 */
+  background-color: var(--card); /* bg-gray-800 */
   color: #ffffff; /* text-white */
   padding: 1rem; /* p-4 */
   border-radius: 0.5rem; /* rounded-lg */
@@ -32,7 +32,7 @@
   
     .technology {
       padding: 0.15rem 0.45rem;
-      background-color: #3c6e71;
+      background-color: var(--primary);
       border-radius: 999px;
     }
   }

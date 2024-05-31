@@ -17,6 +17,23 @@ const variants = {
     }
 }
 
+const svgVariants = {
+    hidden: {
+        opacity: 0,
+        pathLength: 0,
+        fill: "#000000"
+    },
+    visible: {
+        opacity: 1,
+        pathLength: 1,
+        fill: "white",
+        transition: {
+            duration: 4,
+            ease: "easeInOut"
+        }
+    }
+}
+
 const Contact = () => {
     return (
         <motion.div className="contact" variants={variants} initial="hidden" whileInView="visible">
@@ -48,7 +65,7 @@ const Contact = () => {
                     <input type="text" required placeholder="Name" />
                     <input type="text" required placeholder="Email" />
                     <textarea rows={8} placeholder="Message"></textarea>
-                    <button>Submit</button>
+                    <button className="submitButton">Submit</button>
                 </motion.form>
             </motion.div>
         </motion.div>
