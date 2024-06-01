@@ -1,0 +1,12 @@
+@import "../../App.scss";
+
+.footer {
+    height: 3rem;
+    background-color: var(--footer);
+    color: var(--primary);
+    font-family: var(--font-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

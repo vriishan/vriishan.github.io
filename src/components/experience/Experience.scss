@@ -1,21 +1,35 @@
 .experience {
     color: black;
     font-family: "Inconsolata", monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
-    .vertical-timeline-element-icon {
-        overflow: hidden;
-        width: 70px !important;
-        height: 70px !important;
-        margin-left: -36px !important;
-        svg {
-            width: 63px !important;
-            height: 63px !important;
-            margin-left: -32px !important;
-            margin-top: -28px !important;
+    .container {
+        display: flex;
+        max-width: var(--max-width);
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .vertical-timeline-element-icon {
+            overflow: hidden;
+            width: 70px !important;
+            height: 70px !important;
+            margin-left: -36px !important;
+            svg {
+                width: 63px !important;
+                height: 63px !important;
+                margin-left: -32px !important;
+                margin-top: -28px !important;
+            }
+        }
+    
+        .date {
+            color: white;
         }
     }
 
-    .date {
-        color: white;
-    }
 }

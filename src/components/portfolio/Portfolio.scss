@@ -1,11 +1,11 @@
 @import "../../App.scss";
 
 .portfolio {
-  max-width: 1366px; /* container mx-auto */
+  max-width: var(--max-width); /* container mx-auto */
   margin-left: auto; /* container mx-auto */
   margin-right: auto; /* container mx-auto */
   padding: 2rem; /* p-8 */
-  font-family: "Inconsolata", monospace;
+  font-family: var(--font-text);
 }
 
 .grid-container {
@@ -32,7 +32,7 @@
   
     .technology {
       padding: 0.15rem 0.45rem;
-      background-color: var(--primary);
+      background-color: var(--bubble);
       border-radius: 999px;
     }
   }
