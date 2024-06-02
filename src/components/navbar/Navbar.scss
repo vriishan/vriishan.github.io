@@ -11,7 +11,8 @@
     justify-content: space-between;
     align-items: center;
     font-family: "Inconsolata", monospace;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid;
+    border-color: var(--border-100);
 
     @include mobile {
         display: none

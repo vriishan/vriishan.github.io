@@ -2,23 +2,36 @@ html, body {
     scroll-behavior: smooth;
 }
 
-
 $text: #ffffff;
 $background: #121212;
-$card: #1d1b1b;
-$primary: #005148;
-$secondary: #2e816f;
+$footer: #0c0c0c;
+$card: #1f1f1f;
+$bubble: #2D3142;
+$primary: #2e816f;
+$secondary: #005148;
 $accent: #2bffdc;
 $tertiary: #B94CCF;
+$border-100: #1B3432;
+$blue: #065ea5;
 
 :root {
+    --font-text: 'Inconsolata', monospace;
+    --font-heading: 'FigTree', sans-serif;
+
+    --max-width: 1200px;
+
+    --text: #{$text};
     --accent: #{$accent};
     --background: #{$background};
+    --footer: #{$footer};
     --primary: #{$primary};
     --secondary: #{$secondary};
     --accent: #{$accent};
     --tertiary: #{$tertiary};
     --card: #{$card};
+    --bubble: #{$bubble};
+    --border-100: #{$border-100};
+    --blue: #{$blue};
 }
 
 * {
@@ -33,7 +46,7 @@ a {
 }
 
 body {
-    background-color: #111111;
+    background-color: var(--background);
     color: rgb(225, 237, 241);
 }
 
@@ -85,6 +98,10 @@ section {
     .sectionHeader.small {
         font-size: 2rem;
     }
+}
+
+.highlight {
+    color: var(--accent);
 }
 
 .header.contact {
