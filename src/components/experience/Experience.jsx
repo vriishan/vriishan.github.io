@@ -17,7 +17,9 @@ const Experience = () => {
                 <div className="header">
                     <h1 className="sectionHeader white"><font className="numberedHeading">03.</font>Experience</h1>
                 </div>
-                <VerticalTimeline>
+                <VerticalTimeline
+                    lineColor={"var(--secondary)"}
+                >
                     {timelineElements.map((element) => {
                         let showButton =
                             element.buttonText !== undefined &&

@@ -1,6 +1,8 @@
 @import "./../../App.scss";
 
 .sidebar {
+
+    font-family: var(--font-text);
     
     @include desktop {
         display: none;
