@@ -24,10 +24,10 @@ const App = () => {
       </section>
       <About />
       <Skills/>
-      <Experience />
       <div ref={portfolioRef}>
         <Portfolio />
       </div>
+      <Experience />
       <section id="Contact"><Contact/></section>
       <Footer/>
     </div>
