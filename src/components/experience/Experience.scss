@@ -19,12 +19,24 @@
             width: 70px !important;
             height: 70px !important;
             margin-left: -36px !important;
+            box-shadow: 0 0 0 4px var(--card), inset 0 2px 0 rgba(0, 0, 0, .08), 0 3px 0 4px rgba(0, 0, 0, .05);
+
             svg {
                 width: 63px !important;
                 height: 63px !important;
                 margin-left: -32px !important;
                 margin-top: -28px !important;
             }
+        }
+
+        .vertical-timeline-element-content {
+            background-color: var(--primary);
+            color: var(--text);
+            box-shadow: 0 3px 0 var(--secondary);
+
+            .vertical-timeline-element-content-arrow {
+                border-right: 7px solid var(--secondary);
+            } 
         }
     
         .date {

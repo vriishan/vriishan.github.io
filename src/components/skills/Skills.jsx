@@ -3,40 +3,8 @@ import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import './Skills.scss';
 import Card from './card/Card';
 import { useSpring } from 'framer-motion';
+import skills from './data';
 
-
-const skills = [
-  {
-    id: 1,
-    title: "Frontend",
-    image: ["/react.png", "/react.png", "/react.png"],
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, deleniti! Maiores quis incidunt eveniet reiciendis sequi sapiente voluptates facere in! Modi nihil asperiores mollitia fugit sed corporis veniam hic ullam."
-  },
-  {
-    id: 2,
-    title: "Frontend",
-    image: ["/react.png"],
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, deleniti! Maiores quis incidunt eveniet reiciendis sequi sapiente voluptates facere in! Modi nihil asperiores mollitia fugit sed corporis veniam hic ullam."
-  },
-  {
-    id: 3,
-    title: "DevOps1",
-    image: ["/react.png"],
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veniam accusamus sint inventore at doloremque quae blanditiis totam excepturi dolorem atque maiores distinctio expedita itaque odit eaque consequuntur, nulla dicta."
-  },
-  {
-    id: 4,
-    title: "DevOps2",
-    image: ["/react.png"],
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veniam accusamus sint inventore at doloremque quae blanditiis totam excepturi dolorem atque maiores distinctio expedita itaque odit eaque consequuntur, nulla dicta."
-  },
-  {
-    id: 5,
-    title: "DevOps3",
-    image: ["/react.png"],
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veniam accusamus sint inventore at doloremque quae blanditiis totam excepturi dolorem atque maiores distinctio expedita itaque odit eaque consequuntur, nulla dicta."
-  }
-];
 
 const Skills = () => {
 
