@@ -17,40 +17,40 @@ import ShellScriptLogo from "../icons/tech/ShellScriptLogo";
 
 const skills = [
     {
+      id: 2,
+      title: "Backend",
+      image: [SpringLogo, DjangoLogo, JavaLogo],
+      description: "Experienced in developing scalable and efficient microservices exposing RESTful APIs and services. Extended backend applications into an event-driven environment spanning integrations with multiple tools and third party APIs."
+    },
+    {
       id: 1,
       title: "Frontend",
       image: [ReactLogo, AngularLogo, JsLogo],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, deleniti! Maiores quis incidunt eveniet reiciendis sequi sapiente voluptates facere in! Modi nihil asperiores mollitia fugit sed corporis veniam hic ullam."
-    },
-    {
-      id: 2,
-      title: "Frontend",
-      image: [SpringLogo, DjangoLogo, JavaLogo],
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, deleniti! Maiores quis incidunt eveniet reiciendis sequi sapiente voluptates facere in! Modi nihil asperiores mollitia fugit sed corporis veniam hic ullam."
-    },
-    {
-      id: 3,
-      title: "DevOps1",
-      image: [AwsLogo, DockerLogo, K8sLogo],
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veniam accusamus sint inventore at doloremque quae blanditiis totam excepturi dolorem atque maiores distinctio expedita itaque odit eaque consequuntur, nulla dicta."
-    },
-    {
-      id: 4,
-      title: "DevOps2",
-      image: [PostgreLogo, MongoDBLogo],
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veniam accusamus sint inventore at doloremque quae blanditiis totam excepturi dolorem atque maiores distinctio expedita itaque odit eaque consequuntur, nulla dicta."
-    },
-    {
-      id: 5,
-      title: "DevOps3",
-      image: [KafkaLogo, RedisLogo],
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veniam accusamus sint inventore at doloremque quae blanditiis totam excepturi dolorem atque maiores distinctio expedita itaque odit eaque consequuntur, nulla dicta."
+      description: "Passionate about building clean interfaces and dashboards. Over 3 years of experience developing in HTML, CSS, JS, React and Angular frameworks. Built dynamic web forms and optimized performance of web applications."
     },
     {
       id: 6,
-      title: "DevOps3",
+      title: "Scripting/Automation",
       image: [PythonLogo, ShellScriptLogo],
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur veniam accusamus sint inventore at doloremque quae blanditiis totam excepturi dolorem atque maiores distinctio expedita itaque odit eaque consequuntur, nulla dicta."
+      description: "Automated various workflows and manual processes involving language translation, build processes, data provisioning, solution tenant creation and container configuration using Python and Shell scripts."
+    },
+    {
+      id: 3,
+      title: "Infra/Cloud",
+      image: [AwsLogo, DockerLogo, K8sLogo],
+      description: "Skilled in managing infrastructure with over 3 years of experience using AWS, Docker, and Kubernetes. Proficient in deploying applications to cloud environments, containerizing applications for consistency and portability, and orchestrating containerized workloads."
+    },
+    {
+      id: 4,
+      title: "Databases",
+      image: [PostgreLogo, MongoDBLogo],
+      description: "Handled database management and data design using PostgreSQL and MongoDB. Proficient in writing complex queries, optimizing database operations, and managing both relational and NoSQL databases to support various application needs."
+    },
+    {
+      id: 5,
+      title: "Pub/Sub",
+      image: [KafkaLogo, RedisLogo],
+      description: "Engineered performance with an event driven architecture brought by Kafka and Redis. Designed message schemas with Schema Registry and event workflow across multiple teams."
     }
   ];
 

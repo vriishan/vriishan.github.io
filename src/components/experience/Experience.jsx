@@ -28,7 +28,7 @@ const Experience = () => {
                         let currentIcon = "";
                         if (element.location === "Bangalore University") {
                             currentIcon = <BU />;
-                        } else if (element.location === "USC") {
+                        } else if (element.location === "Information Technology Services, USC") {
                             currentIcon = <USC />;
                         } else {
                             currentIcon = <Philips />;

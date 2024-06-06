@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import CursorBlinker from "./CursorBlinker/CursorBlinker";
 import downloadLogo from '/download.svg'
 
-const Navbar = ({ portfolioRef }) => {
+const Navbar = ({ portfolioRef, heroRef, aboutRef, skillsRef, experienceRef, contactRef }) => {
 
     const name = "Vrushab"
     const count = useMotionValue(0);
@@ -30,9 +30,10 @@ const Navbar = ({ portfolioRef }) => {
         displayName.onChange((latest) => setDisplayNameValue(latest));
     }, [displayName]);
 
-    const scrollToPortfolio = () => {
-        if (portfolioRef.current) {
-            portfolioRef.current.scrollIntoView({ behavior: 'smooth' });
+    const scrollToSection = (ref, e) => {
+        e.preventDefault();
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -98,15 +99,17 @@ const Navbar = ({ portfolioRef }) => {
                 </div>
                 <div className="navbarMiddle">
                     <div className="links">
-                        <motion.a href="#" variants={hoverVariant} whileHover="hover">home</motion.a>
-                        <motion.a href="#About" variants={hoverVariant} whileHover="hover">about</motion.a>
-                        <motion.a href="#Skills" variants={hoverVariant} whileHover="hover">skills</motion.a>
-                        <motion.a href="#Experience" variants={hoverVariant} whileHover="hover">experience</motion.a>
-                        <motion.a variants={hoverVariant} whileHover="hover" onClick={scrollToPortfolio}>projects</motion.a>
+                        <motion.a href="#" variants={hoverVariant} whileHover="hover" onClick={(e) => scrollToSection(heroRef, e)}>home</motion.a>
+                        <motion.a href="#" variants={hoverVariant} whileHover="hover" onClick={(e) => scrollToSection(aboutRef, e)}>about</motion.a>
+                        <motion.a href="#" variants={hoverVariant} whileHover="hover" onClick={(e) => scrollToSection(skillsRef, e)}>skills</motion.a>
+                        <motion.a href="#" variants={hoverVariant} whileHover="hover" onClick={(e) => scrollToSection(experienceRef, e)}>experience</motion.a>
+                        <motion.a href="#" variants={hoverVariant} whileHover="hover" onClick={(e) => scrollToSection(portfolioRef, e)}>projects</motion.a>
                     </div>
                 </div>
                 <div className="navbarRight">
+                    <a href="https://drive.google.com/file/d/1hwh_k0ckXGqQIZdEfk2Ufg1u_NQ3RFnG/view?usp=sharing" download>
                     <motion.button className="resumeButton" variants={hoverVariant} whileHover="hoverButton">My Resume<img src={downloadLogo}/></motion.button>
+                    </a>
                 </div>
             </div>
         </motion.div>
