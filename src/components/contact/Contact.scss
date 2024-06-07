@@ -91,10 +91,10 @@
                 cursor: pointer;
                 font-weight: 500;
                 font-family: "Inconsolata";
+                color: var(--text);
 
                 @include mobile {
                     padding: 10px;
-
                 }
             }
 

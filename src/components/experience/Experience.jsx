@@ -15,16 +15,13 @@ const Experience = () => {
         <div className="experience">
             <div className="container">
                 <div className="header">
-                    <h1 className="sectionHeader white"><font className="numberedHeading">03.</font>Experience</h1>
+                    <h1 className="sectionHeader white"><font className="numberedHeading">04.</font>Experience</h1>
                 </div>
                 <VerticalTimeline
                     lineColor={"var(--secondary)"}
                 >
                     {timelineElements.map((element) => {
-                        let showButton =
-                            element.buttonText !== undefined &&
-                            element.buttonText !== null &&
-                            element.buttonText !== "";
+
                         let currentIcon = "";
                         if (element.location === "Bangalore University") {
                             currentIcon = <BU />;
@@ -39,7 +36,7 @@ const Experience = () => {
                                 key={element.id}
                                 date={element.date}
                                 dateClassName="date"
-                                iconStyle={{ background: "#ffffff", color: '#000000' }}
+                                iconStyle={{ background: "var(--text)", color: '#000000' }}
                                 icon={currentIcon}
                             >
                                 <h3 className="vertical-timeline-element-title">

@@ -19,11 +19,36 @@
 .portfolio-item {
   background-color: var(--card); /* bg-gray-800 */
   color: #ffffff; /* text-white */
-  padding: 1rem; /* p-4 */
   border-radius: 0.5rem; /* rounded-lg */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
   flex: 1;
   cursor: pointer;
+
+  .itemImageContainer {
+    width: 100%;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--secondary-card);
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    
+    .portfolio-item-img {
+      width: 85%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      translate: -50% 5%;
+      border-radius: .4rem;
+    }
+  }
+
+  .itemTextContainer {
+    padding: 1rem;
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+  }
 
   .techStack {
     display: flex;
@@ -40,19 +65,11 @@
 }
 
 .featured {
-  flex: 1 1 calc(60% - 2rem);
+  flex: 1 1 calc(55% - 2rem);
 }
 
 .normal {
   flex: 1 1 calc(33.333% - 2rem);
-}
-
-.portfolio-item-img {
-  border-top-left-radius: 0.5rem; /* rounded-t-lg */
-  border-top-right-radius: 0.5rem; /* rounded-t-lg */
-  margin-bottom: 1rem; /* mb-4 */
-  width: 100%;
-  // height: 50px;
 }
 
 .portfolio-item-title {
