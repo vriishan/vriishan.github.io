@@ -13,22 +13,45 @@ import Socials from "./components/socials/Socials";
 
 const App = () => {
   const portfolioRef = useRef();
+  const heroRef = useRef();
+  const aboutRef = useRef();
+  const skillsRef = useRef();
+  const experienceRef = useRef();
+  const contactRef = useRef();
+
   return (
     <div>
       {/* <Cursor /> */}
-      <Navbar portfolioRef={portfolioRef}/>
+      <Navbar 
+        portfolioRef={portfolioRef}
+        heroRef={heroRef} 
+        aboutRef={aboutRef}
+        experienceRef={experienceRef}
+        skillsRef={skillsRef}
+      />
       <Socials />
       <Sidebar />
-      <section style={{backgroundColor: 'var(--background)', color: 'var(--text)'}}>
-        <Hero></Hero>        
+      <section ref={heroRef}>
+        <Hero 
+          contactRef={contactRef}
+          portfolioRef={portfolioRef}
+        />
       </section>
-      <About />
-      <Skills/>
+      <div ref={aboutRef}>
+        <About />
+      </div>
+      <div ref={skillsRef}>
+        <Skills/> 
+      </div>
       <div ref={portfolioRef}>
         <Portfolio />
       </div>
-      <Experience />
-      <section id="Contact"><Contact/></section>
+      <div ref={experienceRef}>
+        <Experience />
+      </div>
+      <section ref={contactRef}>
+        <Contact/>
+      </section>
       <Footer/>
     </div>
   );

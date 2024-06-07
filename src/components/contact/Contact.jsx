@@ -44,11 +44,11 @@ const Contact = () => {
                 <motion.h1 variants={variants}>Let's connect!</motion.h1>
                 <div className="item">
                     <h2>Mail</h2>
-                    <span>hello@react.dev</span>
+                    <span>vrushab.shandilya@gmail.com</span>
                 </div>
                 <div className="item">
                     <h2>Address</h2>
-                    <span>1234 Watt Way, WTC, New York</span>
+                    <span>Los Angeles, CA</span>
                 </div>
                 <div className="item">
                     <h2>Phone</h2>

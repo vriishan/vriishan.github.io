@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 
 
 const About = () => {
+
   const hoverVariant = {
     hover: {
       backgroundColor: "var(--primary)",
@@ -26,15 +27,17 @@ const About = () => {
           </div>
           <div className="textContainer">
             <div className="description">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem deleniti quis voluptas impedit aspernatur officia aut maiores quam vero libero obcaecati earum necessitatibus nesciunt, minima eum. Vel accusamus similique voluptatibus!</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo pariatur, aperiam doloribus perferendis officiis incidunt deleniti esse? Eligendi, ut! Aperiam dignissimos nulla laudantium optio cum dolore odit quibusdam ad impedit.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo pariatur, aperiam doloribus perferendis officiis incidunt deleniti esse? Eligendi, ut! Aperiam dignissimos nulla laudantium optio cum dolore odit quibusdam ad impedit.</p>
+              <p>Hi there, my name is Vrushab. I'm a software engineer specializing in full-stack software engineering and automation solutions. I enjoy building products that solve everyday problems and strive to focus on the real things and let the machine do the hard work!</p>
+              <p>I've had the privilege of interning and working at a large healthcare company building platform solutions covering the interface, application development, backend design and deployment, all while keeping with best software quality standards. </p>
+              <p>I'm also fortunate enough to be continuing my education at the University of Southern California, pursuing my Master's in Computer Science. After a great learning of databases, security and operating systems, I am primed with a deep understanding of the underlying architecture and cutting-edge technologies that interact with data.</p>
+              <p>When I'm away from my keyboard, you can find me jamming at my piano, hiking away in the Los Angeles hills or catching the latest sci-fi action movie!</p>
             </div>
             <div className="linksContainer">
-              Grab a copy of my resume and reach out to me on linkedin or email!
+              Grab a copy of my resume and reach out to me on Linkedin or Email!
               <div className="buttonsContainer">
-                <motion.button variants={hoverVariant} whileHover="hover">My Resume <OpenIcon fill="var(--text)" /></motion.button>
-                <motion.button variants={hoverVariant} whileHover="hover">Linkedin <LinkedInLogo fill="var(--text)" /></motion.button>
+                <a href="https://drive.google.com/file/d/1hwh_k0ckXGqQIZdEfk2Ufg1u_NQ3RFnG/view?usp=sharing" target="_blank"><motion.button variants={hoverVariant} whileHover="hover">My Resume <OpenIcon fill="var(--text)" /></motion.button></a>
+                <a href="https://linkedin.com/in/vrushab-shandilya" target="_blank"><motion.button variants={hoverVariant} whileHover="hover">Linkedin <LinkedInLogo fill="var(--text)" /></motion.button>
+                </a>
               </div>
             </div>
           </div>

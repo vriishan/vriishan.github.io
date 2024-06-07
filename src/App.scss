@@ -9,6 +9,7 @@ $card: #1f1f1f;
 $bubble: #2D3142;
 $primary: #2e816f;
 $secondary: #005148;
+$secondary-card: #001d19;
 $accent: #2bffdc;
 $tertiary: #B94CCF;
 $border-100: #1B3432;
@@ -32,6 +33,7 @@ $blue: #065ea5;
     --bubble: #{$bubble};
     --border-100: #{$border-100};
     --blue: #{$blue};
+    --secondary-card: #{$secondary-card};
 }
 
 * {

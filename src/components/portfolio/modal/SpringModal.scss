@@ -16,17 +16,20 @@
   .closeModal {
     background: none;
     border: none;
-    color: var(--text);
     font-size: var(--text-md);
     position: absolute;
     top: 1.2rem;
     right: 1.2rem;
     cursor: pointer;
+
+    img {
+      fill: var(--text);
+    }
   }
 }
 
 .modal-content {
-  background: linear-gradient(to bottom right, #000000, #3a3a3b);
+  background: var(--card);
   /* from-violet-600 to-indigo-600 */
   color: white;
   /* p-6 */
@@ -46,8 +49,13 @@
 
   .imageContainer {
     flex: 2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     img {
+      height: 500px;
       width: 100%;
+      object-fit: contain;
     }
   }
 
@@ -72,7 +80,33 @@
     .modal-footer {
       display: flex;
       gap: 0.5rem;
-      /* gap-2 */
+      margin-top: 0.5rem;
+
+      .links {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+
+        a {
+          display: flex;
+          flex-direction: row;
+          border: 2px solid var(--primary);
+          color: var(--primary);
+          font-weight: 700;
+          padding: 0.55rem;
+          gap: 0.55rem;
+          border-radius: 0.25rem;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+
+          svg {
+            height: 1.55rem;
+            width: 1.55rem;
+          }
+        }
+      }
+      
     }
   
   }

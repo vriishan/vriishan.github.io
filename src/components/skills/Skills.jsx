@@ -15,21 +15,7 @@ const Skills = () => {
   })
 
   const smoothProgress = useSpring(scrollYProgress, { mass: 0.25, stiffness: 50 })
-  const x = useTransform(smoothProgress, [0, 1], ["10%", "-65%"]);
-
-  const isInView = useInView(ref, {
-    margin: "-100px"
-  });
-
-  const variants = {
-    initial: { x: 0, opacity: 0 },
-    animate: {
-      x: 0, opacity: 1, y: 0, transition: {
-        duration: 1,
-        staggerChildren: 0.5
-      }
-    }
-  }
+  const x = useTransform(smoothProgress, [0, 1], ["10%", "-55%"]);
 
   return (
     <motion.div className="skills" ref={ref} animate="animate">

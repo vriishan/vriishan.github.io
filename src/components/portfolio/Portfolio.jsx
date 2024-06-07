@@ -1,6 +1,4 @@
-import { useRef, useState } from "react";
 import "./Portfolio.scss";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import projects from "./projects";
 import PortfolioItem from "./PortfolioItem";
 
@@ -8,7 +6,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio">
       <div className="header">
-          <h1 className="sectionHeader white"><font className="numberedHeading">04.</font>Projects</h1>
+          <h1 className="sectionHeader white"><font className="numberedHeading">03.</font>Projects</h1>
       </div>
       <div className="grid-container">
         {projects.map((item, index) => {
@@ -17,9 +15,11 @@ const Portfolio = () => {
                 key={index}
                 title={item.title}
                 description={item.desc}
+                text={item.text}
                 imageUrl={item.img}
                 type={item.type}
                 techStack={item.techStack}
+                links={item.links}
               />
           );
         }
