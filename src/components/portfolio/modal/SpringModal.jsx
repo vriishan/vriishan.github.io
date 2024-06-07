@@ -1,7 +1,6 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import './SpringModal.scss'; 
-import GithubLogo from '../../icons/socials/GithubLogo'
 import CloseIcon from '../../icons/others/CloseIcon';
 
 const SpringModal = ({ isOpen, setIsOpen, project }) => {
@@ -47,10 +46,10 @@ const SpringModal = ({ isOpen, setIsOpen, project }) => {
                                 <div className="links">
                                     {project.links.map((item, index) => {
                                         return (
-                                            <a href={item.link} key={index}>
+                                            <motion.a href={item.link} key={index} whileHover={{ color: "var(--accent)", borderColor: "var(--accent)"}}>
                                                 {item.text}
                                                 <item.logo fill="var(--primary)" hover="var(--accent)" background="var(--card)"/>
-                                            </a>
+                                            </motion.a>
                                         )
                                     })}
                                 </div>
