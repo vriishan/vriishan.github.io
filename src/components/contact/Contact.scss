@@ -84,11 +84,11 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
 
-                width: 40%;
-                height: 40%;
+                width: 35%;
+                height: 35%;
                 overflow: visible;
                 stroke: var(--accent);
-                stroke-width: 1;
+                stroke-width: 2;
                 stroke-linejoin: round;
                 stroke-linecap: round;
 
@@ -99,7 +99,7 @@
             flex-direction: column;
             gap: 2rem;
             width: 100%;
-    
+
             input, textarea {
                 padding: 20px;
                 background-color: transparent;

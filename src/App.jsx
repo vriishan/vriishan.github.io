@@ -42,6 +42,7 @@ const App = () => {
           <Hero 
             contactRef={contactRef}
             portfolioRef={portfolioRef}
+            aboutRef={aboutRef} 
           />
         </section>
         <div ref={aboutRef}>
