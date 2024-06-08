@@ -8,6 +8,7 @@
     align-items: center;
     gap: 3rem;
     font-family: "Inconsolata", monospace;
+    padding: 5rem 0;
 
     @include mobile {
         width: 100%;
@@ -72,13 +73,25 @@
             width: 100%;
         }
 
-        .phoneSvg {
-                width: 10px;
+        @include tablet {
+            padding: 3rem;
+            width: 100%;
+        }
+
+        .messageSvg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: 40%;
+                height: 40%;
                 overflow: visible;
-                stroke: #fff;
+                stroke: var(--accent);
                 stroke-width: 1;
                 stroke-linejoin: round;
                 stroke-linecap: round;
+
         }
 
         form {
