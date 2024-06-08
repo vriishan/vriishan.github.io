@@ -8,10 +8,6 @@
     font-family: "Inconsolata", monospace;
     flex-direction: column;
 
-    @include mobile{
-        overflow: scroll;   
-    }
-
     .header {
         display: flex;
         justify-content: center;

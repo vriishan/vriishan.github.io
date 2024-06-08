@@ -6,42 +6,58 @@
     margin: auto;
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 3rem;
     font-family: "Inconsolata", monospace;
+    padding: 5rem 0;
 
     @include mobile {
         width: 100%;
         flex-direction: column;
-        padding: 10px;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+
+    @include tablet {
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem;
     }
 
     .textContainer {
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 2rem;
 
         @include mobile {
-            gap: 20px;
             text-align: center;
             align-items: center;
-            margin-top: 70px;
         }
 
         h1 {
-            font-size: 100px;
-            line-height: 88px;
-            font-family: "Figtree", monospace;
+            font-size: 6rem;
+            line-height: 6rem;
+            font-family: var(--font-heading);
             word-wrap: break-word;
 
             @include mobile {
-                font-size: 36px;
+                font-size: 5rem;
+                line-height: 3rem;
+            }
+        }
 
+        h2 {
+            @include mobile {
+                font-size: 2rem;
             }
         }
 
         span {
             font-weight: 300;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -53,25 +69,37 @@
         justify-content: center;
 
         @include mobile {
-            padding: 50px;
+            padding: 3rem;
             width: 100%;
         }
 
-        .phoneSvg {
-                width: 10px;
+        @include tablet {
+            padding: 3rem;
+            width: 100%;
+        }
+
+        .messageSvg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: 35%;
+                height: 35%;
                 overflow: visible;
-                stroke: #fff;
-                stroke-width: 1;
+                stroke: var(--accent);
+                stroke-width: 2;
                 stroke-linejoin: round;
                 stroke-linecap: round;
+
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 2rem;
             width: 100%;
-    
+
             input, textarea {
                 padding: 20px;
                 background-color: transparent;

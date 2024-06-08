@@ -53,7 +53,6 @@ body {
 }
 
 section {
-    height: 100vh;
     scroll-snap-align: center;
     overflow: hidden;
 }
@@ -130,5 +129,29 @@ section {
 @mixin desktop {
     @media (min-width: 1367px) {
         @content;
+    }
+}
+
+@include tablet {
+    html {
+        font-size: 2vw;
+    }
+}
+
+@include mobile {
+    html {
+        font-size: 2.5vw;
+    }
+}
+
+.padder {
+    padding: 0rem;
+
+    @include mobile {
+        padding: 0rem 2rem;
+    }
+
+    @include tablet {
+        padding: 0rem 6rem;
     }
 }

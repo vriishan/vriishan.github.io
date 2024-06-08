@@ -31,9 +31,11 @@ const About = () => {
               <p>I've had the privilege of interning and working at a large healthcare company building platform solutions covering the interface, application development, backend design and deployment, all while keeping with best software quality standards. </p>
               <p>I'm also fortunate enough to be continuing my education at the University of Southern California, pursuing my Master's in Computer Science. After a great learning of databases, security and operating systems, I am primed with a deep understanding of the underlying architecture and cutting-edge technologies that interact with data.</p>
               <p>When I'm away from my keyboard, you can find me jamming at my piano, hiking away in the Los Angeles hills or catching the latest sci-fi action movie!</p>
+              <p>
+              Grab a copy of my resume and reach out to me on Linkedin or Email!
+              </p>
             </div>
             <div className="linksContainer">
-              Grab a copy of my resume and reach out to me on Linkedin or Email!
               <div className="buttonsContainer">
                 <a href="https://drive.google.com/file/d/1hwh_k0ckXGqQIZdEfk2Ufg1u_NQ3RFnG/view?usp=sharing" target="_blank"><motion.button variants={hoverVariant} whileHover="hover">My Resume <OpenIcon fill="var(--text)" /></motion.button></a>
                 <a href="https://linkedin.com/in/vrushab-shandilya" target="_blank"><motion.button variants={hoverVariant} whileHover="hover">Linkedin <LinkedInLogo fill="var(--text)" /></motion.button>

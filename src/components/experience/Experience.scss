@@ -1,3 +1,5 @@
+@import "./../../App.scss";
+
 .experience {
     color: black;
     font-family: "Inconsolata", monospace;
@@ -14,6 +16,15 @@
         justify-content: center;
         flex-direction: column;
 
+        .vertical-timeline::before {
+            @include mobile {
+                background: var(--background);
+            }
+            @include tablet {
+                background: var(--background);
+            }
+        }
+
         .vertical-timeline-element-icon {
             overflow: hidden;
             width: 70px !important;
@@ -26,6 +37,10 @@
                 height: 63px !important;
                 margin-left: -32px !important;
                 margin-top: -28px !important;
+            }
+
+            @include mobile {
+                margin-left: -22px !important;
             }
         }
 
