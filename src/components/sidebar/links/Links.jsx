@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const Links = () => {
+const Links = ({ portfolioRef, heroRef, aboutRef, skillsRef, experienceRef, contactRef }) => {
 
     const variants = {
         open: {
@@ -31,16 +31,41 @@ const Links = () => {
     const items = [
         "Home",
         "About",
+        "Skills",
         "Experience",
         "Projects",
         "Contact"
     ]
 
+    const refs = [
+        heroRef, 
+        aboutRef,
+        skillsRef,
+        experienceRef,
+        portfolioRef, 
+        contactRef
+    ]
+
+    const scrollToSection = (ref, e) => {
+        e.preventDefault();
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <motion.div className="links" variants={variants}>{items.map((item) => {
-                return <motion.a href={`#${item}`} key={item} variants={itemVariants} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                    {item}
-                </motion.a>
+        <motion.div className="links" variants={variants}>{items.map((item, index) => {
+                return (
+                    <motion.a 
+                        key={item} 
+                        variants={itemVariants} 
+                        whileHover={{scale: 1.1}} 
+                        whileTap={{scale: 0.9}}
+                        onClick={(e) => scrollToSection(refs[index], e)}
+                    >
+                        {item}
+                    </motion.a>
+                )
             })}
         </motion.div>
     );

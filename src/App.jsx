@@ -21,7 +21,6 @@ const App = () => {
 
   return (
     <div>
-      {/* <Cursor /> */}
       <Navbar 
         portfolioRef={portfolioRef}
         heroRef={heroRef} 
@@ -30,28 +29,39 @@ const App = () => {
         skillsRef={skillsRef}
       />
       <Socials />
-      <Sidebar />
-      <section ref={heroRef}>
-        <Hero 
-          contactRef={contactRef}
-          portfolioRef={portfolioRef}
-        />
-      </section>
-      <div ref={aboutRef}>
-        <About />
+      <Sidebar 
+        portfolioRef={portfolioRef}
+        heroRef={heroRef} 
+        aboutRef={aboutRef}
+        experienceRef={experienceRef}
+        skillsRef={skillsRef}
+        contactRef={contactRef}
+      />
+      <div className="padder">
+        <section ref={heroRef}>
+          <Hero 
+            contactRef={contactRef}
+            portfolioRef={portfolioRef}
+          />
+        </section>
+        <div ref={aboutRef}>
+          <About />
+        </div>
       </div>
       <div ref={skillsRef}>
         <Skills/> 
       </div>
-      <div ref={portfolioRef}>
-        <Portfolio />
+      <div className="padder">
+        <div ref={portfolioRef}>
+          <Portfolio />
+        </div>
+        <div ref={experienceRef}>
+          <Experience />
+        </div>
+        <section ref={contactRef}>
+          <Contact/>
+        </section>
       </div>
-      <div ref={experienceRef}>
-        <Experience />
-      </div>
-      <section ref={contactRef}>
-        <Contact/>
-      </section>
       <Footer/>
     </div>
   );
