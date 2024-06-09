@@ -34,30 +34,28 @@
             align-items: center;
         }
 
+        .prompt {
+            font-size: var(--fs-200);
+        }
+
         h1 {
-            font-size: 6rem;
+            font-size: var(--fs-xl);
             line-height: 6rem;
             font-family: var(--font-heading);
             word-wrap: break-word;
 
             @include mobile {
-                font-size: 5rem;
                 line-height: 3rem;
             }
         }
 
         h2 {
-            @include mobile {
-                font-size: 2rem;
-            }
+            font-size: var(--fs-300);
         }
 
         span {
+            font-size: var(--fs-200);
             font-weight: 300;
-
-            @include mobile {
-                font-size: 1.5rem;
-            }
         }
     }
 

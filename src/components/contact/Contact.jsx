@@ -42,6 +42,9 @@ const Contact = () => {
                     <h1 className="sectionHeader white small"><font className="numberedHeading small">05.</font>What's next?</h1>
                 </div>
                 <motion.h1 variants={variants}>Let's connect!</motion.h1>
+                <div className="prompt">
+                    <p>I am eager to apply my skillset and continue building meaningful products as a software engineer in a challenging and ever-changing tech environment. Please feel free to reach out with any opportunities through any of the platforms listed here! </p>
+                </div>
                 <div className="item">
                     <h2>Mail</h2>
                     <span>vrushab.shandilya@gmail.com</span>
