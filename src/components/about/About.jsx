@@ -19,7 +19,7 @@ const About = () => {
     <div className="about">
       <div className="mainContainer">
         <div className="header">
-          <h1 className="sectionHeader"><font className="numberedHeading">01.</font> About Me</h1>
+          <h1 className="sectionHeader" style={{"line-height": 0}}><font className="numberedHeading">01.</font> About Me</h1>
         </div>
         <div className="content">
           <div className="imageContainer">

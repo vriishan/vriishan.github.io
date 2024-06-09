@@ -8,6 +8,10 @@
     overflow: hidden;
     position: relative;
 
+    @include mobile {
+        min-height: 100vh;
+    }
+
     .wrapper {
         max-width: var(--max-width);
         height: 100%;
@@ -17,12 +21,12 @@
 
         @include mobile {
             flex-direction: column;
-            align-items: flex-center;
+            align-items: center;
         }
 
         @include tablet {
             flex-direction: column;
-            align-items: flex-center;
+            align-items: center;
         }
 
         .textContainer {
@@ -34,7 +38,7 @@
             gap: 1rem;
              
             @include mobile {
-                height: 50%;
+                height: 100%;
                 width: 100%;
                 gap: 2rem;
                 align-items: center;
@@ -43,8 +47,8 @@
             }
 
             @include tablet {
-                height: 50%;
-                width: 100%;
+                height: 100%;
+                width: 80%;
                 gap: 2rem;
                 align-items: center;
                 text-align: center;
@@ -52,7 +56,7 @@
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: var(--fs-300);
                 color: var(--secondary);
                 font-family: var(--font-text);
                 margin: 0;
@@ -65,7 +69,7 @@
 
             h1 {
                 font-family: var(--font-heading);
-                font-size: 4.25rem;
+                font-size: var(--fs-xl);
                 font-weight: 400;
                 word-wrap: break-word;
                 width: 100%;
@@ -73,15 +77,22 @@
             }
 
             .buttons {
+                display: flex;
                 margin-top: 2.25rem;
+
+                @include mobile {
+                    margin-top: 0rem;
+                    gap: 1rem;
+                }
+
                 button {
+                    flex: 1;
                     font-family: "Inconsolata", monospace;
                     padding: 1.5rem;
                     border: 1px solid white;
-                    margin-right: 20px;
                     cursor: pointer;
                     font-weight: 500;
-                    font-size: 1.15rem;
+                    font-size: var(--fs-200);
                 }
                 
                 .projectButton {
@@ -107,7 +118,6 @@
             
             .fullstackText {
                 background: linear-gradient(90deg, #f67e9c, #3e1da2);
-                // background: linear-gradient(88.1deg, #09ad9a .94%, #75eddc 99.22%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -118,7 +128,6 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
-                // color: var(--blue);
             }
         }
 
@@ -132,12 +141,11 @@
             height: 100%;
 
             @include mobile {
-                width: 100%;
+                display: none;
             }
 
             @include tablet {
-                width: 100%;
-                padding-top: 5rem;
+                display: none;
             }
 
             .automator {
@@ -197,16 +205,6 @@
             }
 
         }
-    }
-
-    .slidingTextContainer {
-        position: absolute;
-        font-size: 50vh;
-        bottom: -120px;
-        width: 50%;
-        white-space: nowrap;
-        color: rgba(0, 0, 0, 0.274);
-        font-weight: bold;
     }
 
     .imageContainer {

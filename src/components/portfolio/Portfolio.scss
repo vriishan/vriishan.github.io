@@ -80,7 +80,7 @@
   flex: 1 1 calc(33.333% - 2rem);
 
   @include mobile {
-    flex: 1 1 calc(50% - 2rem);
+    flex: 1 1 calc(100% - 2rem);
   }
 
   @include tablet {

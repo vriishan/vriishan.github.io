@@ -2,38 +2,30 @@ html, body {
     scroll-behavior: smooth;
 }
 
-$text: #ffffff;
-$background: #121212;
-$footer: #0c0c0c;
-$card: #1f1f1f;
-$bubble: #2D3142;
-$primary: #2e816f;
-$secondary: #005148;
-$secondary-card: #001d19;
-$accent: #2bffdc;
-$tertiary: #B94CCF;
-$border-100: #1B3432;
-$blue: #065ea5;
-
 :root {
     --font-text: 'Inconsolata', monospace;
     --font-heading: 'FigTree', sans-serif;
 
     --max-width: 1200px;
 
-    --text: #{$text};
-    --accent: #{$accent};
-    --background: #{$background};
-    --footer: #{$footer};
-    --primary: #{$primary};
-    --secondary: #{$secondary};
-    --accent: #{$accent};
-    --tertiary: #{$tertiary};
-    --card: #{$card};
-    --bubble: #{$bubble};
-    --border-100: #{$border-100};
-    --blue: #{$blue};
-    --secondary-card: #{$secondary-card};
+    --text: #ffffff;
+    --accent: #2bffdc;
+    --background: #121212;
+    --footer: #0c0c0c;
+    --primary: #2e816f;
+    --secondary: #005148;
+    --tertiary: #B94CCF;
+    --card: #1f1f1f;
+    --bubble: #2D3142;
+    --border-100: #1B3432;
+    --blue: #065ea5;
+    --secondary-card: #001d19;
+
+    --fs-xl: 4rem;
+    --fs-600: 3rem;
+    --fs-400: 2.5rem;
+    --fs-300: 1.75rem;
+    --fs-200: 1.25rem;
 }
 
 * {
@@ -78,26 +70,25 @@ section {
     padding: 3rem 0;
     
     .sectionHeader {
-        font-family: "Figtree";
-        font-size: 3rem;
+        font-family: var(--font-heading);
+        font-size: var(--fs-400);
 
         .numberedHeading {
-            color: $accent;
-            font-family: "Inconsolata";
-            font-size: 3rem;
+            color: var(--accent);
+            font-family: var(--font-text);
         }
 
         .numberedHeading.small {
-            font-size: 1.75rem;
+            font-size: var(--fs-300);
         }
     }
 
     .sectionHeader.white {
-        color: $text;
+        color: var(--text);
     }
 
     .sectionHeader.small {
-        font-size: 2rem;
+        font-size: var(--fs-300);
     }
 }
 
@@ -132,26 +123,24 @@ section {
     }
 }
 
-@include tablet {
-    html {
-        font-size: 2vw;
-    }
-}
-
-@include mobile {
-    html {
-        font-size: 2.5vw;
-    }
-}
-
 .padder {
     padding: 0rem;
 
     @include mobile {
-        padding: 0rem 2rem;
+        padding: 0rem 1rem;
     }
 
     @include tablet {
-        padding: 0rem 6rem;
+        padding: 0rem 2.25rem;
+    }
+}
+
+@include mobile {
+    :root {
+        --fs-xl: 3rem;
+        --fs-600: 2.75rem;
+        --fs-400: 2.25rem;
+        --fs-300: 1.5rem;
+        --fs-200: 1rem;
     }
 }
