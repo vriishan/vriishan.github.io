@@ -45,7 +45,7 @@ const App = () => {
             aboutRef={aboutRef} 
           />
         </section>
-        <div ref={aboutRef}>
+        <div ref={aboutRef} style={{ "display": "flex"}}>
           <About />
         </div>
       </div>
