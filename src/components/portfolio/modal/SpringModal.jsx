@@ -1,9 +1,14 @@
 import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useAnimate } from 'framer-motion';
 import './SpringModal.scss'; 
 import CloseIcon from '../../icons/others/CloseIcon';
 
 const SpringModal = ({ isOpen, setIsOpen, project }) => {
+
+    const buttonVariants= {
+        "hover": { color: "var(--accent)", borderColor: "var(--accent)"}
+    }
+
     return (
         <AnimatePresence>
             {isOpen && 
@@ -46,9 +51,9 @@ const SpringModal = ({ isOpen, setIsOpen, project }) => {
                                 <div className="links">
                                     {project.links.map((item, index) => {
                                         return (
-                                            <motion.a href={item.link} key={index} whileHover={{ color: "var(--accent)", borderColor: "var(--accent)"}}>
+                                            <motion.a href={item.link} key={index} whileHover="hover" variants={buttonVariants}>
                                                 {item.text}
-                                                <item.logo fill="var(--primary)" hover="var(--accent)" background="var(--card)"/>
+                                                <item.logo key={index} fill="var(--primary)" hover="var(--accent)" background="var(--card)"/>
                                             </motion.a>
                                         )
                                     })}
