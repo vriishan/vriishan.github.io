@@ -28,7 +28,7 @@ const About = () => {
           <div className="textContainer">
             <div className="description">
               <p>Hi there, my name is Vrushab. I'm a software engineer specializing in full-stack software engineering and automation solutions. I enjoy building products that solve everyday problems and strive to focus on the real things and let the machine do the hard work!</p>
-              <p>I've had the privilege of interning and working at a large healthcare company building platform solutions covering the interface, application development, backend design and deployment, all while keeping with best software quality standards. </p>
+              <p>I've had the privilege of interning and working at a large healthcare company building platform solutions covering the interface, application development, backend design and deployment, all while keeping with the best software quality standards. </p>
               <p>I'm also fortunate enough to be continuing my education at the University of Southern California, pursuing my Master's in Computer Science. After a great learning of databases, security and operating systems, I am primed with a deep understanding of the underlying architecture and cutting-edge technologies that interact with data.</p>
               <p>When I'm away from my keyboard, you can find me jamming at my piano, hiking away in the Los Angeles hills or catching the latest sci-fi action movie!</p>
               <p>
