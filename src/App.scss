@@ -63,7 +63,7 @@ section {
 }
 
 
-.header {
+%base-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,16 +92,12 @@ section {
     }
 }
 
-.highlight {
-    color: var(--accent);
+.header {
+    @extend %base-header
 }
 
-.header.contact {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 0rem;
-    width: 100%;
+.highlight {
+    color: var(--accent);
 }
 
 
