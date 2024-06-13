@@ -59,10 +59,10 @@ const App = () => {
         <div ref={experienceRef}>
           <Experience />
         </div>
-        <section ref={contactRef}>
+      </div>
+      <section ref={contactRef} style={{ backgroundColor: "var(--secondary)"}}>
           <Contact/>
         </section>
-      </div>
       <Footer/>
     </div>
   );
