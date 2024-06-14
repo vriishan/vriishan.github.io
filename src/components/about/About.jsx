@@ -2,6 +2,7 @@ import React from 'react'
 import './About.scss'
 import LinkedInLogo from '../icons/socials/LinkedInLogo';
 import OpenIcon from '../icons/others/OpenIcon';
+import { RESUME_LINK } from '../../var';
 
 import { color, motion } from 'framer-motion';
 
@@ -44,7 +45,7 @@ const About = () => {
           </div>
           <div className="linksContainer">
             <div className="buttonsContainer">
-              <a href="https://drive.google.com/file/d/1hwh_k0ckXGqQIZdEfk2Ufg1u_NQ3RFnG/view?usp=sharing" target="_blank"><motion.button variants={hoverVariant} initial="initial" whileHover="hover">My Resume <OpenIcon fill="var(--text)" hover="var(--background)"/></motion.button></a>
+              <a href={RESUME_LINK} target="_blank"><motion.button variants={hoverVariant} initial="initial" whileHover="hover">My Resume <OpenIcon fill="var(--text)" hover="var(--background)"/></motion.button></a>
               <a href="https://linkedin.com/in/vrushab-shandilya" target="_blank"><motion.button variants={hoverVariant} whileHover="hover" initial="initial" >Linkedin <LinkedInLogo fill="var(--text)" hover="var(--background)"/></motion.button>
               </a>
             </div>

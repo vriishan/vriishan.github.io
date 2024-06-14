@@ -3,6 +3,7 @@ import { motion, useScroll, useMotionValueEvent, useMotionValue, useTransform, a
 import { useState, useEffect } from "react";
 import CursorBlinker from "./CursorBlinker/CursorBlinker";
 import downloadLogo from '/download.svg'
+import { RESUME_LINK } from "../../var";
 
 const Navbar = ({ portfolioRef, heroRef, aboutRef, skillsRef, experienceRef, contactRef }) => {
 
@@ -107,7 +108,7 @@ const Navbar = ({ portfolioRef, heroRef, aboutRef, skillsRef, experienceRef, con
                     </div>
                 </div>
                 <div className="navbarRight">
-                    <a href="https://drive.google.com/file/d/1hwh_k0ckXGqQIZdEfk2Ufg1u_NQ3RFnG/view?usp=sharing" download>
+                    <a href={RESUME_LINK} download>
                     <motion.button className="resumeButton" variants={hoverVariant} whileHover="hoverButton">My Resume<img src={downloadLogo}/></motion.button>
                     </a>
                 </div>
