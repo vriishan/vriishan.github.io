@@ -34,9 +34,9 @@ const About = () => {
             </div>
             <div className="textContainer">
               <div className="description">
-                <p>Hi there, my name is Vrushab. I'm a software engineer specializing in full-stack software engineering and automation solutions. I enjoy building products that solve everyday problems and strive to focus on the real things and let the machine do the hard work!</p>
-                <p>I've had the privilege of interning and working at a large healthcare company building platform solutions covering the interface, application development, backend design and deployment, all while keeping with the best software quality standards. </p>
-                <p>When I'm away from my keyboard, you can find me jamming at my piano, hiking away in the Los Angeles hills or catching the latest sci-fi action movie!</p>
+                <p>Hi there, my name is Vrushab. I'm a software engineer specializing in full-stack software engineering and automation solutions. I enjoy building products that solve everyday problems and strive to focus on real things while letting machines handle the hard work!</p>
+                <p>I've had the privilege of interning and working at a large healthcare company, where I built platform solutions covering the interface, application development, backend design, and deployment, all while adhering to the best software quality standards.</p>
+                <p>When I'm away from my keyboard, you can find me jamming at my piano, hiking in the Los Angeles hills, or catching the latest sci-fi action movie!</p>
                 <p>
                 Grab a copy of my resume and reach out to me on Linkedin or Email!
                 </p>

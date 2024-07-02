@@ -38,7 +38,7 @@ const skills = [
       id: 3,
       title: "Infra/Cloud",
       image: [AwsLogo, DockerLogo, K8sLogo],
-      description: "Skilled in managing infrastructure with over 3 years of experience using AWS, Docker, and Kubernetes. Proficient in deploying applications to cloud environments, containerizing applications for consistency and portability, and orchestrating containerized workloads."
+      description: "Skilled in managing infrastructure with AWS (SAA certified), Docker, and Kubernetes. Detailed service requirements, containerized applications and orchestrated workloads."
     },
     {
       id: 4,
