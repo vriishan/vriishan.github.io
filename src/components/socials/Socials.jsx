@@ -2,10 +2,10 @@ import React from 'react'
 import './Socials.scss'
 import GithubLogo from '../icons/socials/GithubLogo'
 import LinkedInLogo from '../icons/socials/LinkedInLogo'
-import InstagramLogo from '../icons/socials/InstagramLogo'
 import YoutubeLogo from '../icons/socials/YoutubeLogo'
 import MailLogo from '../icons/socials/MailLogo'
 import { motion } from 'framer-motion'
+import TwitterLogo from '../icons/socials/TwitterLogo'
 
 const Socials = () => {
   return (
@@ -31,8 +31,8 @@ const Socials = () => {
             </a>
         </motion.div>
         <motion.div class="linkContainer" whileHover="hover">
-            <a href="https://instagram.com/vriishan" class="link" rel="noreferrer" target="_blank">
-                <InstagramLogo fill={"var(--text)"}/>
+            <a href="https://twitter.com/_vshandilya" class="link" rel="noreferrer" target="_blank">
+                <TwitterLogo fill={"var(--text)"}/>
             </a>
         </motion.div>
     </div>
