@@ -6,7 +6,6 @@ const projects = [
       id: 4,
       title: "Snapville",
       img: "./projects/snapville/window.png",
-      type: "featured",
       desc: "A distributed image server",
       text: ["Snapville is a distributed image server application. It offers a platform where users can upload, search, and view images efficiently.", "The application features both user and admin functionalities. Users can register, log in, upload images, search by title, tags, or user, and view images in full format. The admin has additional privileges, such as managing all users and their images, providing a higher level of control over the platform.", "Snapville's architecture includes a backend built with Django, which handles REST APIs and database interactions via PostgreSQL. The frontend, developed in React, manages user interactions and communicates with the backend to fetch and display images. The system utilizes a sharded database setup to ensure scalability, storing images locally for efficient access."],
       techStack: [
@@ -28,6 +27,27 @@ const projects = [
           link: "https://youtu.be/U_wEC_3AXXA",
           logo: YoutubeLogo
         }
+      ]
+    },
+    {
+      id: 7,
+      title: "CryptoBoard",
+      img: "./projects/cryptoboard/cryptoboard.png",
+      desc: "Real-time cryptocurrency dashboard to analyse crypto prices, trends and news",
+      text: ["CryptoBoard is a real-time cryptocurrency dashboard built to track live data from various digital assets using a custom-built crawler. The crawler scrapes data from multiple sources, storing it in MongoDB for efficient querying and persistence. Docker containers for each type of service ensure a scalable and consistent deployment across environments, while React provides a dynamic user interface to display key metrics like prices, market trends, and trading volumes.", "The architecture is designed for flexibility, allowing for easy updates and maintenance. CryptoBoard offers a seamless experience for users to monitor cryptocurrency data and ingest crypto information to make better insights and decisions on their portfolio."],
+      techStack: [
+        "Django",
+        "React",
+        "MongoDB",
+        "Python",
+        "Docker"
+      ],
+      links: [
+        {
+          text: "Source Code",
+          link: "https://github.com/vriishan/CryptoBoard",
+          logo: GithubLogo
+        },
       ]
     },
     {
@@ -74,7 +94,6 @@ const projects = [
       id: 7,
       title: "Overture",
       img: "./projects/overture/window.png",
-      type: "featured",
       desc: "A web based music player",
       text: ["This project showcases the creation of an online music library using relational database management systems (RDBMS) and a robust front/back end setup. Users can access a database of music categorized by albums and artists, view top tracks, search across songs, albums, and artists, manage playlists and their profile.", "The backend uses MySQL for data management, while the front end employs HTML, CSS, and JavaScript for an interactive user interface. PHP handles server-side scripting to facilitate communication between the web server and the database. This setup ensures efficient data handling, secure interactions, and seamless music playback with no interruptions when navigating."],
       techStack: [

@@ -16,29 +16,31 @@ const PortfolioItem = ({ title, description, imageUrl, techStack, type, text, li
     }, [isOpen]);
 
     const handleEnter = async() => {
-        animate(".portfolio-item-img", 
-            {
-                rotate: 3.5,
-                scale: 1.07
-            },
-            {
-                duration: 0.25,
-                type: "spring"
-            } 
-        )
+        // TODO: see if we can animate the box itself
+        // animate(".portfolio-item-img", 
+        //     {
+        //         rotate: 3.5,
+        //         scale: 1.07
+        //     },
+        //     {
+        //         duration: 0.25,
+        //         type: "spring"
+        //     } 
+        // )
     }
 
     const handleLeave = async() => {
-        animate(".portfolio-item-img", 
-            {
-                rotate: 0,
-                scale: 1
-            },
-            {
-                duration: 0.25,
-                type: "spring"
-            } 
-        )
+        // TODO: see if we can animate the box itself
+        // animate(".portfolio-item-img", 
+        //     {
+        //         rotate: 0,
+        //         scale: 1
+        //     },
+        //     {
+        //         duration: 0.25,
+        //         type: "spring"
+        //     } 
+        // )
     }
 
     const project = { title, description, imageUrl, techStack, text, links };
